@@ -1,7 +1,3 @@
-Below is a **complete, factual, GitHub-ready `README.md`** that exactly reflects **what you actually built**, **why you built it**, **how it works**, **what failed**, and **why the final system is correct**.
-
-You can copy-paste this **as-is** into your repository.
-No overclaims. No missing pieces. Fully Track-B aligned.
 
 ---
 
@@ -193,9 +189,9 @@ This makes it a true **Track-B compliant reasoning system**.
 
 ```
 
-├── notebook.ipynb        # Full implementation
+├── team_harry_puttar_jupyter.ipynb        # Full implementation
 ├── README.md             # This file
-├── submission_final.csv  # Final predictions
+├── results.csv           # Final predictions
 └── docs/                 # Supporting documentation
 
 ```
@@ -216,8 +212,3 @@ By removing symbolic noise and focusing on memory stability, it achieves interpr
 
 ---
 
-If you want, I can now:
-
-* Compress this into a **1-page hackathon README**
-* Or adapt it for **academic-style reviewers**
-* Or generate **architecture diagrams (PNG/SVG)**
