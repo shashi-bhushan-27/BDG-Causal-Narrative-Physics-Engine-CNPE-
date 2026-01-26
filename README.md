@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # 🧠 Causal Narrative Physics Engine (CNPE)
 
 **Track-B Submission | BDH-Driven Long-Horizon Narrative Reasoning**
@@ -37,13 +33,13 @@ A backstory is consistent if it does **not inject high energy (friction)** into 
 
 We define a scalar reasoning signal:
 
-\[
+$$
 \Delta = \mathcal{L}_{fresh}(x) - \mathcal{L}_{memory}(x)
-\]
+$$
 
 Where:
-- \( \mathcal{L}_{fresh} \): Loss from a BDH model with **no narrative memory**
-- \( \mathcal{L}_{memory} \): Loss from a BDH model **primed on the novel**
+- $\mathcal{L}_{fresh}$: Loss from a BDH model with **no narrative memory**
+- $\mathcal{L}_{memory}$: Loss from a BDH model **primed on the novel**
 
 ### Interpretation
 - **Low Δ** → Stable under narrative constraints → **Consistent**
@@ -52,8 +48,6 @@ Where:
 ---
 
 ## 🏗️ Architecture
-
-```
 
 ```
                   FULL NOVEL (100k+ tokens)
@@ -72,28 +66,26 @@ Where:
                             │
          ┌──────────────────┴──────────────────┐
          │                                     │
-```
-
-┌────────────▼────────────┐           ┌────────────▼────────────┐
-│        Fresh BDH        │           │       Primed BDH         │
-│   (No narrative memory) │           │ (Narrative memory core)  │
-└────────────┬────────────┘           └────────────┬────────────┘
-│                                     │
-└───────────────┬─────────────────────┘
-▼
-Δ = Loss_fresh − Loss_primed
-(Synaptic Friction Energy)
-│
-▼
-┌────────────────────────────────┐
-│   Energy-Based Decision Layer   │
-│  (Monotonic Physics Threshold) │
-└────────────────────────────────┘
-│
-▼
-Final Consistency Label
-Consistent (1) / Contradict (0)
-
+         ▼                                     ▼
+┌────────────────────┐           ┌────────────────────────┐
+│     Fresh BDH      │           │      Primed BDH        │
+│ (No narrative mem) │           │ (Narrative memory core)│
+└─────────┬──────────┘           └──────────┬─────────────┘
+          │                                 │
+          └────────────────┬────────────────┘
+                           ▼
+            Δ = Loss_fresh − Loss_primed
+             (Synaptic Friction Energy)
+                           │
+                           ▼
+        ┌──────────────────────────────────┐
+        │  Energy-Based Decision Layer     │
+        │  (Monotonic Physics Threshold)   │
+        └──────────────┬───────────────────┘
+                       │
+                       ▼
+           Final Consistency Label
+        Consistent (1) / Contradict (0)
 ```
 
 ---
@@ -188,12 +180,11 @@ This makes it a true **Track-B compliant reasoning system**.
 ## 📂 Repository Structure
 
 ```
-
-├── team_harry_puttar_jupyter.ipynb        # Full implementation
-├── README.md             # This file
-├── results.csv           # Final predictions
-└── docs/                 # Supporting documentation
-
+├── team_harry_puttar_jupyter_nb.ipynb  # Full implementation
+├── README.md                           # This file
+├── results.csv.xlsx                    # Final predictions
+├── project_report.pdf                  # Project report
+└── metrics_visualization/              # Visualization outputs
 ```
 
 ---
@@ -208,7 +199,3 @@ By removing symbolic noise and focusing on memory stability, it achieves interpr
 **Author:** Shashi Bhushan Vijay  
 **Track:** Track-B  
 **Approach:** BDH-Driven Causal Memory
-```
-
----
-
